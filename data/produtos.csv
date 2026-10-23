@@ -1,0 +1,13 @@
+codigo;nome;descricao;dataFabricacao;dataValidade;precoCompra;precoVenda;quantidadeEstoque;categoriaId;categoriaNome;categoriaDescricao;categoriaSetor
+PRD00001;Leite Integral 1L;Leite UHT integral caixa 1 litro;2026-09-20;2026-11-15;4.20;5.99;120;1;Laticínios;Leite, queijos e iogurtes;Frios e Laticínios
+PRD00002;Iogurte Natural 170g;Iogurte natural sem açúcar;2026-10-05;2026-11-04;1.80;3.49;8;1;Laticínios;Leite, queijos e iogurtes;Frios e Laticínios
+PRD00003;Queijo Mussarela 500g;Queijo mussarela fatiado;2026-09-30;2027-01-10;18.50;26.90;35;1;Laticínios;Leite, queijos e iogurtes;Frios e Laticínios
+PRD00004;Refrigerante Cola 2L;Refrigerante sabor cola garrafa 2 litros;2026-07-01;2027-03-01;5.50;8.99;200;2;Bebidas;Refrigerantes, sucos e águas;Mercearia
+PRD00005;Suco de Laranja 1L;Suco de laranja integral;2026-08-10;2026-12-10;4.00;7.49;6;2;Bebidas;Refrigerantes, sucos e águas;Mercearia
+PRD00006;Detergente Neutro 500ml;Detergente líquido neutro;2026-03-01;2028-03-01;1.50;2.99;150;3;Limpeza;Produtos de limpeza doméstica;Casa
+PRD00007;Água Sanitária 2L;Água sanitária galão 2 litros;2026-05-10;2027-05-10;3.20;5.49;9;3;Limpeza;Produtos de limpeza doméstica;Casa
+PRD00008;Banana Prata kg;Banana prata por quilo;2026-10-20;2026-10-30;3.00;5.99;40;4;Hortifruti;Frutas, legumes e verduras;Perecíveis
+PRD00009;Tomate kg;Tomate salada por quilo;2026-10-18;2026-11-02;4.50;7.99;5;4;Hortifruti;Frutas, legumes e verduras;Perecíveis
+PRD00010;Arroz Branco 5kg;Arroz branco tipo 1 pacote 5kg;2026-06-15;2027-06-15;21.00;29.90;80;6;Mercearia;Arroz, feijão, massas e grãos;Mercearia
+PRD00011;Feijão Carioca 1kg;Feijão carioca tipo 1;2026-07-20;2027-01-20;5.80;8.99;60;6;Mercearia;Arroz, feijão, massas e grãos;Mercearia
+PRD00012;Sabonete 90g;Sabonete em barra;2026-01-10;2028-01-10;1.10;2.49;300;5;Higiene Pessoal;Sabonetes, shampoos e cremes dentais;Casa

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.edu.unifan.produtos.ui.MainController"
+            prefWidth="1200" prefHeight="700">
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <Tab text="Produtos">
+                <HBox spacing="16">
+                    <padding>
+                        <Insets top="16" right="16" bottom="16" left="16"/>
+                    </padding>
+
+                    <!-- Formulário de cadastro -->
+                    <VBox spacing="10" minWidth="360" prefWidth="360">
+                        <Label text="Cadastrar produto" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                        <GridPane hgap="8" vgap="8">
+                            <columnConstraints>
+                                <ColumnConstraints minWidth="120" prefWidth="120"/>
+                                <ColumnConstraints hgrow="ALWAYS"/>
+                            </columnConstraints>
+
+                            <Label text="Código *" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtCodigo" promptText="8 caracteres (ex.: PRD00013)"
+                                       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                            <Label text="Nome *" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtNome" promptText="Mínimo 3 caracteres"
+                                       GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                            <Label text="Descrição" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtDescricao" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                            <Label text="Fabricação *" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                            <DatePicker fx:id="dpFabricacao" promptText="dd/mm/aaaa" maxWidth="Infinity"
+                                        GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                            <Label text="Validade *" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                            <DatePicker fx:id="dpValidade" promptText="dd/mm/aaaa" maxWidth="Infinity"
+                                        GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                            <Label text="Preço de compra *" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtPrecoCompra" promptText="ex.: 4,20"
+                                       GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                            <Label text="Preço de venda *" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtPrecoVenda" promptText="ex.: 5,99"
+                                       GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                            <Label text="Qtd. em estoque *" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                            <TextField fx:id="txtEstoque" promptText="número inteiro"
+                                       GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                            <Label text="Categoria *" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                            <ComboBox fx:id="cbCategoria" promptText="Selecione" maxWidth="Infinity"
+                                      GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+                        </GridPane>
+                        <HBox spacing="8">
+                            <Button text="Salvar" onAction="#onSalvar"/>
+                            <Button text="Limpar" onAction="#onLimpar"/>
+                        </HBox>
+                        <Label text="* campos obrigatórios" style="-fx-text-fill: #666666;"/>
+                    </VBox>
+
+                    <!-- Consulta e listagem -->
+                    <VBox spacing="10" HBox.hgrow="ALWAYS">
+                        <Label text="Produtos cadastrados" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                        <HBox spacing="8" alignment="CENTER_LEFT">
+                            <Label text="Consultar por código:"/>
+                            <TextField fx:id="txtBusca" promptText="ex.: PRD00001" prefWidth="160"/>
+                            <Button text="Consultar" onAction="#onConsultar"/>
+                            <Button text="Listar todos" onAction="#onListarTodos"/>
+                            <Button text="Excluir selecionado" onAction="#onExcluir"/>
+                        </HBox>
+                        <TableView fx:id="tabela" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colCodigo" text="Código" prefWidth="85"/>
+                                <TableColumn fx:id="colNome" text="Nome" prefWidth="170"/>
+                                <TableColumn fx:id="colCategoria" text="Categoria" prefWidth="105"/>
+                                <TableColumn fx:id="colSetor" text="Setor" prefWidth="120"/>
+                                <TableColumn fx:id="colFabricacao" text="Fabricação" prefWidth="85"/>
+                                <TableColumn fx:id="colValidade" text="Validade" prefWidth="85"/>
+                                <TableColumn fx:id="colPrecoCompra" text="P. compra" prefWidth="80"/>
+                                <TableColumn fx:id="colPrecoVenda" text="P. venda" prefWidth="80"/>
+                                <TableColumn fx:id="colEstoque" text="Estoque" prefWidth="65"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+                </HBox>
+            </Tab>
+
+            <Tab text="Relatórios">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="16" right="16" bottom="16" left="16"/>
+                    </padding>
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <Label text="Relatório:"/>
+                        <ComboBox fx:id="cbRelatorio" prefWidth="360"/>
+                        <Button text="Atualizar" onAction="#onAtualizarRelatorio"/>
+                    </HBox>
+                    <TextArea fx:id="txtRelatorio" editable="false" wrapText="false" VBox.vgrow="ALWAYS"
+                              style="-fx-font-family: 'Consolas', 'Monospaced'; -fx-font-size: 13px;"/>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+    <bottom>
+        <Label fx:id="lblStatus" text="Pronto." style="-fx-background-color: #eeeeee;" maxWidth="Infinity">
+            <padding>
+                <Insets top="6" right="12" bottom="6" left="12"/>
+            </padding>
+        </Label>
+    </bottom>
+</BorderPane>
