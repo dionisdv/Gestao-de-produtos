@@ -3,7 +3,7 @@
 Sistema em Java com interface gráfica **JavaFX** para gerenciar o cadastro de produtos de uma loja ou supermercado.
 Os dados ficam em um arquivo **CSV separado por ponto-e-vírgula** e os relatórios usam a **API Stream** do Java.
 
-**Aluno(a):** _______________________  **Curso:** _______________________
+Aluno: Cauã Dionis  Curso: ESN4
 
 ---
 
@@ -122,17 +122,3 @@ gestao-produtos/
 | "Não foi possível gravar o arquivo" | O CSV está aberto em outro programa (Excel). Feche e tente de novo. |
 | Tabela abre vazia | Você executou fora da pasta do projeto, então o programa criou outro `data/produtos.csv` vazio. |
 
-## 9. Entrega no GitHub
-
-Dentro da pasta do projeto:
-
-```
-git init
-git add .
-git commit -m "P1 POO III - Gestão de Produtos"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/gestao-produtos.git
-git push -u origin main
-```
-
-(Crie antes o repositório vazio no GitHub. A pasta `target/` já está no `.gitignore`.)
