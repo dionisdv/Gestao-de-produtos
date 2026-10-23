@@ -3,7 +3,7 @@
 Sistema em Java com interface gráfica **JavaFX** para gerenciar o cadastro de produtos de uma loja ou supermercado.
 Os dados ficam em um arquivo **CSV separado por ponto-e-vírgula** e os relatórios usam a **API Stream** do Java.
 
-**Aluno: Cauã Dionis**                               **Curso: ESN4**
+**Aluno: Cauã Dionis**                              **Curso: ESN4**
 
 ---
 
