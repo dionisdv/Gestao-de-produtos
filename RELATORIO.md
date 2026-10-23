@@ -2,7 +2,8 @@
 
 **Disciplina:** Programação Orientada a Objetos III — **Avaliação:** P1
 **Professor:** Daniel Corrêa da Silva
-**Aluno(a):** _______________________  **Curso:** _______________________
+**Aluno(a):**Cauã Dionis 
+**Curso:** ESN4
 
 ## 1. Funcionalidades implementadas
 
